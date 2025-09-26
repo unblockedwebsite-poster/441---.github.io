@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  font-family: Arial, sans-serif;
+  background-color: #030303f0;
+}
+
+.sidebar {
+  width: 160px;
+  background-color: #030303;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 8px 0;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar ul li:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 6px;
+  font-size: 14px;
+  background-color: #121212fd;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #333;
+  color: #ffcc00;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #030303;
+}
+
+.upper-center {
+  text-align: center;
+  font-size: 32px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.upper-heading {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 14px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game-grid {
+  gap: 4px; /* Reduced gap for smaller tiles */
+  padding: 6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Adjusted for smaller tiles */
+  position: absolute; /* Ensure it’s positioned outside the main box */
+  width: calc(100% - 180px); /* Adjust width to account for sidebar */
+  left: 170px; /* Offset to align with content beside sidebar */
+  top: 100px; /* Adjust vertical position as needed */
+}
+
+.game-tile {
+  width: 48px; /* Smaller width */
+  height: 48px; /* Smaller height */
+  background-color: #f2b179; /* 2048-style gold */
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px; /* Smaller font size */
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 0 2px #000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.game-tile img {
+  display: none; /* Hide icon as per your preference */
+}
+
+.game-tile p {
+  margin: 0;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px; /* Match font size to tile */
+}
+
+.game-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #00bfff; /* Smaller shadow for smaller tiles */
+}

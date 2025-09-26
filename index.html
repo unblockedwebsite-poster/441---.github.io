@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>unblocked games</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      font-family: Arial, sans-serif;
+      background-color: #030303f0;
+    }
+
+    .sidebar {
+      width: 160px;
+      background-color: #030303;
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 8px 0;
+      border-radius: 10px;
+      transition: transform 0.2s ease-in-out;
+      background-color: #121212fd;
+    }
+
+    .sidebar ul li:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .sidebar ul li a {
+      display: block;
+      padding: 6px;
+      font-size: 14px;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #333;
+      color: #ffcc00;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #030303;
+    }
+
+    .upper-center {
+      text-align: center;
+      font-size: 32px;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .upper-heading {
+      margin-top: 6px;
+      text-align: center;
+      font-size: 14px;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+.game-grid {
+  gap: 8px; /* ← This adds clean spacing between tiles */
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  position: absolute;
+  width: calc(100% - 180px);
+  left: 170px;
+  top: 180px;
+}
+
+
+.game-tile {
+  width: 100px; /* Smaller tile */
+  height: 100px; /* Smaller tile */
+  background-color: #f2b179; /* 2048-style gold */
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  justify-content: center;
+  align-items: center;
+  font-size: 12px; /* Smaller font to fit with image */
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 0 2px #000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.game-tile img {
+  display: block; /* Show image */
+  width: 9999px; /* Smaller image size to fit tile */
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 2px; /* Space between image and text */
+}
+
+.game-tile p {
+  margin: 0;
+  color: #333;
+  font-weight: bold;
+  font-size: 12px; /* Smaller font to fit */
+}
+
+.game-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #00bfff;
+}
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+
+<div class="main">
+  <div class="container">
+    <section id="home">
+      <div class="upper-center">unblocked games</div>
+      <div class="upper-heading">an unblocked games website [in dev]</div>
+      <div class="upper-heading">pstt.. go to about!</div>
+      <div class="upper-heading" onclick="window.open('https://google.com')">PANIC [PRESS IF SM1 COMES!</div>
+    </section>
+<div class="game-grid">
+  <div class="game-tile" onclick="window.open('games/minecraft 1.5.2/Eaglercraft_IR_1.5.2.html', '_blank')">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.MBm7UYm9qS8hJJ9uJtGSpgHaHa?pid=Api&P=0&h=180" alt="Eaglercraft Icon">
+    <p>Eaglercraft</p>
+</div>
+  </div>
+</div>
+</body>
+</html>
