@@ -29,6 +29,7 @@
     .sidebar ul {
       list-style: none;
       padding: 0;
+
     }
 
     .sidebar ul li {
@@ -75,22 +76,56 @@
       background-color: #030303;
     }
 
-    .upper-center {
-      text-align: center;
-      font-size: 32px;
-      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+@keyframes rainbowShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    .upper-heading {
-      margin-top: 6px;
-      text-align: center;
-      font-size: 14px;
-      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+@keyframes glowPulse {
+  0%   { text-shadow: 0 0 5px #fff, 0 0 10px #00ff00, 0 0 20px #00ff00; }
+  50%  { text-shadow: 0 0 10px #fff, 0 0 20px #00ff00, 0 0 30px #00ff00; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #00ff00, 0 0 20px #00ff00; }
+}
+
+
+.upper-center {
+  text-align: center;
+  font-size: 32px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 5s linear infinite;
+}
+
+.glow-text {
+  text-align: center;
+  font-size: 32px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 5s linear infinite, glowPulse 2s ease-in-out infinite;
+}
+
+
+.upper-heading {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 14px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  animation: rainbowShift 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowpulse 2s infinite;
+}
+
 
 .game-grid {
   gap: 8px; /* ← This adds clean spacing between tiles */
@@ -147,22 +182,22 @@
   <div class="sidebar">
     <h2>Menu</h2>
     <ul>
-      <li><a href="#about">About</a></li>
+      <li><a href="about">About Me</a></li>
     </ul>
   </div>
 
 <div class="main">
   <div class="container">
     <section id="home">
-      <div class="upper-center">unblocked games</div>
-      <div class="upper-heading">an unblocked games website [in dev]</div>
+      <div class="upper-center glow-text">Welcome to 441---.github.io</div>
+      <div class="upper-heading glow-text">A very niche unblocked websites with decoys coming soon!</div>
       <div class="upper-heading">pstt.. go to about!</div>
       <div class="upper-heading" onclick="window.open('https://google.com')">PANIC [PRESS IF SM1 COMES!</div>
     </section>
 <div class="game-grid">
   <div class="game-tile" onclick="window.open('games/minecraft 1.5.2/Eaglercraft_IR_1.5.2.html', '_blank')">
     <img src="https://tse1.mm.bing.net/th/id/OIP.MBm7UYm9qS8hJJ9uJtGSpgHaHa?pid=Api&P=0&h=180" alt="Eaglercraft Icon">
-    <p>Eaglercraft</p>
+    <p>Minecraft 1.5</p>
 </div>
   </div>
 </div>
